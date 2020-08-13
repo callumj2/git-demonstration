@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "group": "build",
+            "label": "make",
+            "command": "mingw32-make",
+            "type": "shell",
+            "problemMatcher": []
+        },
+        {
+            
+            "group": "build",
+            "label": "run",
+            "command": "a2.exe",
+            "args": [
+                "p2c",
+                "<",
+                "tests/calTest.txt"
+
+            ],
+            "type": "shell",
+            "problemMatcher": [],
+            "dependsOn": ["make"]
+        },
+        {
+            
+            "group": "build",
+            "label": "clean",
+            "command": "del",
+            "args": [
+                "*.o",
+
+            ],
+            "type": "shell",
+            "problemMatcher": [],
+        
+        }
+
+    ]
+}
